@@ -8,7 +8,7 @@ import django.contrib.auth.views
 
 import app.forms
 import app.views
-import CRM.views
+from CRM import views
 
 # Uncomment the next lines to enable the admin:
 # from django.conf.urls import include
@@ -20,7 +20,7 @@ urlpatterns = [
     url(r'^$', app.views.home, name='home'),
     url(r'^contact$', app.views.contact, name='contact'),
     url(r'^about', app.views.about, name='about'),
-    url(r'^login/$',CRM.views.login),
+    url(r'^login',views.login),
     #url(r'^login/$',
     #    django.contrib.auth.views.login,
     #    {
